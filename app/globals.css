@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 200px;
+}
+
+h2 {
+  font-size: 80px;
+}
+h3 {
+  font-size: 30px;
+}
+p {
+  font-size: 16px;
+}
