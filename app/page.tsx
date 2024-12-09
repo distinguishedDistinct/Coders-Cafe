@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 const Page = () => {
   return (
     <div className="mainContainer bg-transparent">
-      <section className="sectionOne pb-96">
+      <section className="sectionOne pb-16">
         <SectionOne />
       </section>
       <section className="sectionTwo">

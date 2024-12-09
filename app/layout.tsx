@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      className="bg-gradient-to-r from-gray-950 via-gray-800 "
+      className="bg-gradient-to-r from-gray-950 via-gray-800 bg-no-repeat"
       lang="en"
     >
       <body
