@@ -13,7 +13,7 @@ const SectionThree = () => {
   return (
     <div className="bg-white pb-20">
       <div className="flex justify-around flex-wrap ">
-        <div className="w-1/4">
+        <div className="w-1/4 mb-20 mt-20">
           <motion.div
             ref={refForm}
             initial={{ y: "80px", opacity: 0 }}

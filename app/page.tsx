@@ -13,7 +13,7 @@ const Page = () => {
         <SectionOne />
       </section>
       <section className="sectionTwo">
-        <div className="bg-white">
+        <div className="bg-white w-full">
           <SectionTwo />
         </div>
       </section>

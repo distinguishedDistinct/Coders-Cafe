@@ -8,10 +8,9 @@ const Navbar = () => {
   return (
     <motion.div initial={{ y: "-100%" }} animate={{ y: "0" }}>
       <div className="navbar pt-10 pl-20 pr-20">
-        <div className=""></div>
-        <div className="navbar-start">
+        <div className="navbar-start mr-28">
           <a className="btn btn-ghost text-3xl">
-            <span className="text-yellow-600 ">Coders</span> Cafe.
+            <span className=" text-yellow-600 ">Coders</span> Cafe.
           </a>
         </div>
         <div className="navbar-end mr-20">
@@ -85,6 +84,15 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+        <style jsx>
+          {`
+            @media (max-width: 800px) {
+              .NavName {
+                // display: none;
+              }
+            }
+          `}
+        </style>
       </div>
     </motion.div>
   );

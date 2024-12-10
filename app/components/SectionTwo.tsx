@@ -8,17 +8,22 @@ import { useInView } from "react-intersection-observer";
 
 const SectionTwo = () => {
   const [refTitle, inViewTitle] = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.2,
   });
 
   const [refItem1, inViewItem1] = useInView({
     threshold: 0.1,
-    triggerOnce: false,
+    triggerOnce: true,
+  });
+
+  const [refItem2, inViewItem2] = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
   });
 
   return (
-    <div className="bg-white pb-80">
+    <div className="bg-white pb-16 ">
       <motion.div
         ref={refTitle}
         initial={{ y: 1, scale: 0 }} // Start with small scale
@@ -26,11 +31,11 @@ const SectionTwo = () => {
         transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
       >
         <div className="flex justify-center">
-          <h2 className="text-black font-bold mt-20 mr-36 mb-10 text-5xl">
+          <h2 className="text-black font-bold mt-20  mb-10 text-5xl">
             Fresh and <span className="text-yellow-600">Tasty</span>
           </h2>
         </div>
-        <div className="flex justify-center text-center mr-48 mb-20 text-black">
+        <div className="flex justify-center text-center mb-20 text-black">
           <p>
             Every sip delivers bold flavors, smooth textures, and a taste that
             lingers—crafted <br />
@@ -38,29 +43,8 @@ const SectionTwo = () => {
           </p>
         </div>
       </motion.div>
-      <div className="flex justify-around">
+      <div className="flex justify-evenly flex-wrap">
         {/* Americano */}
-        <motion.div
-          ref={refItem1}
-          initial={{ scale: 0, y: "10px" }}
-          animate={inViewItem1 ? { y: "0px", scale: 1 } : {}}
-          transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
-          className="flex flex-col justify-center items-center" // Center align
-        >
-          <Image
-            src="/Home/Americano.png"
-            width={185}
-            height={200}
-            alt="Americano"
-            className="mb-4" // Adds margin between the image and text
-          />
-          <h4 className="text-3xl text-yellow-600 font-bold text-center">
-            Americano
-          </h4>
-          <p className="w-60 text-center">
-            An Americano is a bold, smooth coffee with just the right strength
-          </p>
-        </motion.div>
 
         {/* Iced Coffee */}
         <motion.div
@@ -81,29 +65,50 @@ const SectionTwo = () => {
             Iced Coffee
           </h4>
           <p className="w-60 text-center">
-            An Iced Coffee is a refreshing and chilled coffee with smooth flavors.
+            An Iced Coffee is a refreshing and chilled coffee with smooth
+            flavors.
           </p>
         </motion.div>
-
+        <motion.div
+          ref={refItem1}
+          initial={{ scale: 0, y: "10px" }}
+          animate={inViewItem1 ? { y: "0px", scale: 1 } : {}}
+          transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
+          className="flex flex-col justify-center items-center" // Center align
+        >
+          <Image
+            src="/Home/Americano.png"
+            width={200}
+            height={200}
+            alt="Americano"
+            className="mb-4 " // Adds margin between the image and text
+          />
+          <h4 className="text-3xl text-yellow-600 font-bold text-center">
+            Americano
+          </h4>
+          <p className="w-60 text-center">
+            An Americano is a bold, smooth coffee with just the right strength
+          </p>
+        </motion.div>
         {/* Latte */}
         <motion.div
           ref={refItem1}
           initial={{ scale: 0, y: "10px" }}
           animate={inViewItem1 ? { y: "0px", scale: 1 } : {}}
           transition={{ type: "spring", stiffness: 100, delay: 0.7 }}
-          className="flex flex-col justify-center items-center" // Center align
+          className="flex flex-col justify-center items-center " // Center align
         >
           <Image
             src="/Home/Latte.png"
-            width={420}
-            height={420}
+            width={450}
+            height={450}
             alt="Latte"
-            className="mb-16 pb-3" // Adds margin between the image and text
+            className="mb-4 pb-5 ml-10" // Adds margin between the image and text
           />
-          <h4 className="text-3xl text-yellow-600 font-bold text-center mr-7">
+          <h4 className="text-3xl text-yellow-600 font-bold text-center ">
             Latte
           </h4>
-          <p className="w-60 text-center mr-7">
+          <p className="w-60 text-center ">
             A Latte is a creamy, smooth coffee perfect for every coffee lover.
           </p>
         </motion.div>
