@@ -20,7 +20,7 @@ const Footer = () => {
           transition={{ type: "spring", duration: 0.6 }}
         >
           <nav className="w-96 ">
-            <h3 className=" text-white mb-10 font-bold text-5xl">
+            <h3 className=" text-white mb-10 font-bold text-5xl mx-10">
               Coders Cafe
             </h3>
             <p className="mb-10 text-white">
@@ -39,7 +39,7 @@ const Footer = () => {
           animate={inViewFooter ? { y: 0, opacity: 1 } : {}}
           transition={{ type: "spring", duration: 0.6, delay: 0.5 }}
         >
-          <nav className="flex flex-col">
+          <nav className="flex flex-col mx-10">
             <h3 className=" text-white mb-10 font-bold text-5xl">
               Quick Links
             </h3>
@@ -63,7 +63,7 @@ const Footer = () => {
           animate={inViewFooter ? { y: 0, opacity: 1 } : {}}
           transition={{ type: "spring", duration: 0.6, delay: 1 }}
         >
-          <nav>
+          <nav className="mx-10">
             <h3 className=" text-white text-5xl mb-5">Follow Me</h3>
             <div className="grid grid-flow-col gap-4 text-white">
               <a
